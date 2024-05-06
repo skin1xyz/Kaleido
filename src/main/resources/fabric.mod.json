@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "kaleido",
+	"version": "${version}",
+	"name": "Kaleido",
+	"description": "",
+	"authors": [
+		"yanggx98"
+	],
+	"contact": {
+	},
+	"license": "All-Rights-Reserved",
+	"icon": "assets/kaleido/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.yanggx98.kaleido.Kaleido"
+		],
+		"client": [
+			"io.github.yanggx98.kaleido.KaleidoClient"
+		]
+	},
+	"mixins": [
+		"kaleido.mixins.json",
+		{
+			"config": "kaleido.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
