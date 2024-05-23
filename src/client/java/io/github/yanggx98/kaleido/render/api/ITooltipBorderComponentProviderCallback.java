@@ -1,9 +1,8 @@
-package io.github.yanggx98.kaleido.tooltip.api;
+package io.github.yanggx98.kaleido.render.api;
 
-import io.github.yanggx98.kaleido.tooltip.components.ColorTooltipBorderComponent;
+import io.github.yanggx98.kaleido.render.components.ColorTooltipBorderComponent;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
-import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.text.Text;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package io.github.yanggx98.kaleido.tooltip;
+package io.github.yanggx98.kaleido.render;
 
-import io.github.yanggx98.kaleido.tooltip.components.ColorTooltipBorderComponent;
+import io.github.yanggx98.kaleido.render.components.ColorTooltipBorderComponent;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;

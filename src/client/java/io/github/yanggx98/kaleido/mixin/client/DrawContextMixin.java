@@ -1,9 +1,9 @@
 package io.github.yanggx98.kaleido.mixin.client;
 
-import io.github.yanggx98.kaleido.tooltip.LimitTooltipDrawer;
-import io.github.yanggx98.kaleido.tooltip.api.*;
-import io.github.yanggx98.kaleido.tooltip.components.ColorTooltipBorderComponent;
-import io.github.yanggx98.kaleido.tooltip.components.TooltipComparatorProvider;
+import io.github.yanggx98.kaleido.render.LimitTooltipDrawer;
+import io.github.yanggx98.kaleido.render.api.*;
+import io.github.yanggx98.kaleido.render.components.ColorTooltipBorderComponent;
+import io.github.yanggx98.kaleido.render.api.TooltipComparatorProvider;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.tooltip.HoveredTooltipPositioner;

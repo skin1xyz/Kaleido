@@ -1,10 +1,8 @@
-package io.github.yanggx98.kaleido.tooltip.api;
+package io.github.yanggx98.kaleido.render.api;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.client.gui.tooltip.TooltipComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
 public interface ITooltipComponentProviderCallback {

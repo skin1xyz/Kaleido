@@ -1,4 +1,4 @@
-package io.github.yanggx98.kaleido.tooltip.components;
+package io.github.yanggx98.kaleido.render.components;
 
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;

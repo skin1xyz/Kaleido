@@ -1,4 +1,4 @@
-package io.github.yanggx98.kaleido.tooltip;
+package io.github.yanggx98.kaleido.render;
 
 import net.minecraft.client.gui.tooltip.TooltipBackgroundRenderer;
 
