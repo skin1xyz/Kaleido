@@ -1,4 +1,4 @@
-package io.github.yanggx98.kaleido.render.api;
+package io.github.yanggx98.kaleido.render.tooltip.api;
 
 import net.minecraft.client.gui.tooltip.TooltipComponent;
 
