@@ -11,10 +11,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
-    @Inject(method = "createPlayerAttributes", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "createPlayerAttributes", at = @At("RETURN"))
     private static void injectCreateLivingAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
         DefaultAttributeContainer.Builder builder = cir.getReturnValue();
         ILivingEntityAttributeAddition.IPlayerEntityAttributeAddition.EVENT.invoker().addAttribute(builder);
-        cir.setReturnValue(builder);
     }
 }

@@ -11,10 +11,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MobEntity.class)
 public class MobEntityMixin {
-    @Inject(method = "createMobAttributes", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "createMobAttributes", at = @At("RETURN"))
     private static void injectCreateLivingAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
         DefaultAttributeContainer.Builder builder = cir.getReturnValue();
         ILivingEntityAttributeAddition.IMobEntityAttributeAddition.EVENT.invoker().addAttribute(builder);
-        cir.setReturnValue(builder);
     }
 }
