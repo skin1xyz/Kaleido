@@ -7,7 +7,6 @@ import io.github.yanggx98.kaleido.render.tooltip.impl.TooltipMark;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.tooltip.HoveredTooltipPositioner;
-import net.minecraft.client.gui.tooltip.OrderedTextTooltipComponent;
 import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.client.gui.tooltip.TooltipPositioner;
 import net.minecraft.item.ItemStack;
@@ -27,11 +26,9 @@ public abstract class DrawContextMixin {
     private void injectDrawTooltip(TextRenderer textRenderer, List<TooltipComponent> components, int x, int y, TooltipPositioner positioner, CallbackInfo ci) {
         TooltipComponent markComponent = null;
         for (TooltipComponent component : components) {
-            if (component instanceof OrderedTextTooltipComponent){
-                String content = getContent(((ITextContentProvider) component).getText());
-                if (TooltipMark.MARK_KEY.equals(content)) {
-                    markComponent = component;
-                }
+            String content = getContent(((ITextContentProvider) component).getText());
+            if (TooltipMark.MARK_KEY.equals(content)) {
+                markComponent = component;
             }
         }
         if (markComponent != null) {
@@ -60,8 +57,8 @@ public abstract class DrawContextMixin {
                     return content;
                 }
             }
-        } catch (IllegalAccessException ignored) {
-
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
         return "";
     }

@@ -9,9 +9,9 @@ public class TooltipModule implements IKaleidoModule {
 
     @Override
     public void load() {
-        ItemTooltipCallback.EVENT.register(((stack, context, lines) -> {
+        ItemTooltipCallback.EVENT.register((stack, context,type, lines) -> {
             TooltipItemStackCache.saveItemStack(stack);
             lines.add(TooltipMark.createItemMark(stack));
-        }));
+        });
     }
 }
